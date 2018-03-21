@@ -73,33 +73,13 @@ h1, h2, h3, h4, h5, h6 {
   z-index: 2;
   margin-bottom: 450px;
 }
-@media screen and (max-width: 992px) {
-  #fh5co-wrap {
-    margin-bottom: auto;
-  }
-}
 
 #fh5co-footer {
-  padding-top: 4em;
-  position: fixed;
-  bottom: 0;
-  left: 0;
-  width: 100%;
-  z-index: 1;
-  height: 450px;
+  padding-top: 1em;
   background: #333333;
   font-size: 18px;
 }
-@media screen and (max-width: 992px) {
-  #fh5co-footer {
-    height: inherit;
-    position: relative;
-    padding: 5em 0;
-  }
-}
-#fh5co-footer .fh5co-social li {
-  display: block;
-}
+
 #fh5co-footer p {
   line-height: 1.5;
 }
@@ -118,12 +98,11 @@ h1, h2, h3, h4, h5, h6 {
   margin: 0;
 }
 #fh5co-footer ul li {
-  padding: 0;
+  padding-left: 30px;
   margin: 0;
   list-style: none;
 }
 #fh5co-footer .fh5co-copyright {
-  padding-top: 3em;
 }
 #fh5co-footer .fh5co-copyright small {
   display: block;
