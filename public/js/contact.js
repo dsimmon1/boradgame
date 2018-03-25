@@ -86,4 +86,19 @@ span2.onclick = function() {
   // animation speed
   animationSpeed: '1s'
 });
+
+
+var video = document.getElementById("hi");
+
+function toggleControls() {
+  if (video.hasAttribute("controls")) {
+     video.removeAttribute("controls")   
+  } else {
+     video.setAttribute("controls","controls")   
+  }
+}
+
+toggleControls();
+
+
 });

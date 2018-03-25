@@ -1,5 +1,16 @@
 $(document).ready(function() {
 
+
+$("#hi").on("mouseleave", function () {
+
+   $(this).removeAttr("controls"); 
+  });
+
+$("#hi").on("mouseover", function () {
+  $(this).attr("controls","controls"); 
+
+  });
+
 function openModal() {
   document.getElementById('myModal').style.display = "block";
 }

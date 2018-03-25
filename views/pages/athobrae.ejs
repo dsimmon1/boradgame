@@ -1,5 +1,5 @@
 	<% include ../partials/head %>
-	<body>
+	<body style="background-image: url('../images/tree_bark.png')">
 	 <nav class="navbar sticky-top navbar-expand-lg navbar-light bg-light">
       <div class="container">
         <a class="navbar-brand" href="#">
@@ -11,7 +11,7 @@
         </button>
         <div class="collapse navbar-collapse" id="navbarResponsive">
           <ul class="navbar-nav ml-auto">
-            <li class="nav-item active">
+            <li class="nav-item">
               <a class="nav-link" href="/home">Home
                 <span class="sr-only">(current)</span>
               </a>
@@ -81,26 +81,29 @@
 		    </div>
 		  </div>
 		</div>
-		<div class="fh5co-hero" style="background-image: url('');  background-color: rgb(32,204,159)" data-stellar-background-ratio="0.5">
+		<div class="fh5co-hero" data-stellar-background-ratio="0.5">
 			<div class="overlay"></div>
 			<div class="container">
 				<div class="row">
 				
 							<div class="col-md-9">
 					
-					<video width="600" height="600" controls>
+					<video id="hi" class="d-block w-100">
 			 		 	<source src="/images/01_Trailer no_ship.mp4" type="video/mp4">
 					  Athobrae Trailer
 					</video>
 			
 							</div>
-							<div class="col-md-3">
-							<ul style="color: white" class="fh5co-social">
-							<li>Designers : Bradford S. Obie and David Panzer
+							<div id="about" class="col-md-3">
+							<ul class="fh5co-social text-center">
+								<h4 id="athobrae">The Last Days of Athobrae</h4>
+								<hr>
+							<li style="font-weight: bold">Designers</li> 
+							<li>Bradford S. Obie and David Panzer
 							</li><br>
-							<li>Players : 1-5</li><br>
-							<li>Time : 2-5 hours</li><br>
-							<li>Age : 12+</li>
+							<li style="font-weight: bold">Players</li> <li> 1-5</li><br>
+							<li style="font-weight: bold">Time </li> <li> 2-5 hours</li><br>
+							<li style="font-weight: bold">Age </li> <li>12+</li>
 						</ul>
 					</div>
 				</div>
@@ -109,24 +112,21 @@
 		<div class="fh5co-section">
 			<div class="container">
 				<div class="row">
-					<div class="col-md-4">
-			<p>For the citizens of Athobrae, the end isn’t just nigh, it’s here. In “The Last Days of Athobrae,” you’ll take on the mantle of one of the 5 sovereign city-states of the dying planet. You’ll compete with other players to amass your planet’s dwindling resources and build a functional Interstellar Quantum Vehicle (IQV)—a ship large enough to evacuate your people.</p>
-					</div>
-					<div class="col-md-4">
-						<p>This is no time for precious sentimentality—there’s not enough resources on this rock for everyone. Alliances will be forged (and smashed). Scouts will be dispatched (and murdered). Lifelong friendships will be crushed beneath the boot of expediency.</p>
-					</div>
-					<div class="col-md-4">
-						<p>As the planet begins to literally collapse beneath your feet, the resources you need to survive grow scarcer—and your opponents more desperate. First civilization to build an IQV and get its people off the planet wins. Second prize (and third, and fourth, and fifth): oblivion in a fiery cataclysm.</p>
+					<div class="col-md-12 text-center">
+						<h1>To the Citzens of Athobrae!</h1>
 					</div>
 				</div>
 				<div class="row">
-					<div class="col-md-4"></div>
-				<div class="col-md-4">
-					<img style="text-align: center" src="../images/anthobrae/Correth Scout.png" alt="pendent" class="img-responsive" height='200px' width='300px'>
+					<div class="col-md-3">
+			<p>The end isn’t just nigh, it’s here. In “The Last Days of Athobrae,” you’ll take on the mantle of one of the 5 sovereign city-states of the dying planet. You’ll compete with other players to amass your planet’s dwindling resources. </p>
+					</div>
+					<div class="col-md-6">
+						<p><img id="scout" src="../images/anthobrae/Correth Scout.png" alt="pendent" class="ext-center" height='150px' width='220px'>Players build a functional Interstellar Quantum Vehicle (IQV)—a ship large enough to evacuate your people. This is no time for precious sentimentality—there’s not enough resources on this rock for everyone. Alliances will be forged (and smashed). Scouts will be dispatched (and murdered). Lifelong friendships will be crushed beneath the boot of expediency.</p>
+					</div>
+					<div class="col-md-3">
+						<p>As the planet begins to literally collapse beneath your feet, the resources you need to survive grow scarcer—and your opponents more desperate. First civilization to build an IQV and get its people off the planet wins. Second prize (and third, and fourth, and fifth): oblivion in a fiery cataclysm.</p>
+					</div>
 				</div>
-				<div class="col-md-4"></div>
-				</div>
-
 			</div>
 		</div>
 
@@ -154,9 +154,24 @@
 					<!-- 	<img src="images/person2.jpg" alt="Free HTML5 Bootstrap Template" class="img-responsive"> -->
 
 						<p>Not only are you contending with wily opponents, the world itself is against you as well.With each “Location” card revealed,the world falls further and further apart, by flipping or removing the hex-tiles that comprise Athobrae.With each accompanying“World Event” card, it falls further and further into chaos. “World Events” will likely spell trouble, but there are those glimmers of light that may come as a boon to you! This element of chance ensures no game will ever be the same, and that means endless hours of unique game play!</p>
-						<img style="text-align: center" src="../images/anthobrae/Athobrae-Kickstarter-2018.png" alt="pendent" class="img-responsive" height='200px' width='300px'>
 					</div>
 				</div>
+					<div class="row">
+						<div class="col-md-5 text-center">
+						<img style="text-align: center" src="../images/anthobrae/Athobrae-Kickstarter-2018.png" alt="pendent" class="d-block w-100" height='200px' width='300px'>
+						<br><br>
+						</div>
+						<div class="col-md-6 text-center">
+							<form>
+          <div style="text-align: center" class="form-group">
+            <h4 style="font-weight: bold">TO RECEIVE KICKSTARTER UPDATES</h4>
+            <input type="text" class="form-control text-center" id="formGroupExampleInput" placeholder="Email">
+            <br>
+            <button id="subscribes" type="submit" class="btn btn-sm btn-primary">Subscribe</button>
+          </div>
+        </form>
+						</div>
+					</div>
 			</div>
 		</div>
 		
