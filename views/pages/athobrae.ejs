@@ -1,10 +1,10 @@
-	<% include ../partials/head %>
+ <% include ../partials/head %>
 	<body style="background-image: url('../images/tree_bark.png')">
 	 <nav class="navbar sticky-top navbar-expand-lg navbar-light bg-light">
       <div class="container">
         <a class="navbar-brand" href="#">
           
-          <img src="/images/MM-Logo.png" height="80px" width="200px">
+          <img src="/images/MM-Logo.png" height="60px" width="170px">
         </a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
@@ -26,9 +26,9 @@
                 <a class="dropdown-item" href="/coming">Coming Soon</a>
               </div>
             </li>
-            <li class="nav-item">
+           <!--  <li class="nav-item">
               <a class="nav-link" href="/store">Store</a>
-            </li>
+            </li> -->
             <li class="nav-item">
               <a class="nav-link" href="/gallery">Gallery</a>
             </li>
@@ -88,16 +88,18 @@
 				
 							<div class="col-md-9">
 					
-					<video id="hi" class="d-block w-100">
+					<video id="hi" class="d-block w-100" poster="../images/videoscreenshot.png">
 			 		 	<source src="/images/01_Trailer no_ship.mp4" type="video/mp4">
 					  Athobrae Trailer
 					</video>
+					<div class="playpause"></div>
+				
 			
 							</div>
 							<div id="about" class="col-md-3">
 							<ul class="fh5co-social text-center">
-								<h4 id="athobrae">The Last Days of Athobrae</h4>
-								<hr>
+								<h4 id="athobrae">THE LAST DAYS OF ATHOBRAE</h4>
+								<!-- <hr> -->
 							<li style="font-weight: bold">Designers</li> 
 							<li>Bradford S. Obie and David Panzer
 							</li><br>
@@ -130,7 +132,7 @@
 			</div>
 		</div>
 
-		<div class="fh5co-parallax" style="background-image: url('');  background-color: rgb(32,204,159)" data-stellar-background-ratio="0.5">
+		<!-- <div class="fh5co-parallax" style="background-image: url('')" data-stellar-background-ratio="0.5">
 			<div class="overlay"></div>
 			<div class="container">
 				<div class="row">
@@ -141,14 +143,15 @@
 					</div>
 				</div>
 			</div>
-		</div>
+		</div> -->
 
 		<div class="fh5co-section">
 			<div class="container">
 				<div class="row">
 					<div class="col-md-6 fh5co-staff">
 						<!-- <img src="images/person3.jpg" alt="Free HTML5 Bootstrap Template" class="img-responsive"> -->
-						<p>“The Last Days of Athobrae” is a resource gathering strategy game filled with unexpected turns and pitfalls.Players send out scouts in search of resources to build their ship, and technology to help their cities triumph.Each city has its own unique strengths and weaknesses.While some may be heavy on attack,others thrive with defense.Know your city, and make your plans wisely because one thing’s for certain: You can expect the unexpected.</p>
+						<h1 class="text-center">How to Play</h1>
+						<p>“The Last Days of Athobrae” is a resource gathering strategy game filled with unexpected turns and pitfalls.Players send out scouts in search of resources to build their ship, and technology to help their cities triumph.Each city has its own unique strengths and weaknesses. While some may be heavy on attack,others thrive with defense.Know your city, and make your plans wisely because one thing’s for certain: You can expect the unexpected.</p>
 					</div>
 					<div class="col-md-6 fh5co-staff">
 					<!-- 	<img src="images/person2.jpg" alt="Free HTML5 Bootstrap Template" class="img-responsive"> -->
@@ -157,19 +160,20 @@
 					</div>
 				</div>
 					<div class="row">
-						<div class="col-md-5 text-center">
+						<div class="col-lg-5 text-center">
 						<img style="text-align: center" src="../images/anthobrae/Athobrae-Kickstarter-2018.png" alt="pendent" class="d-block w-100" height='200px' width='300px'>
 						<br><br>
 						</div>
-						<div class="col-md-6 text-center">
+						<div class="col-lg-1"></div>
+						<div class="col-lg-6 text-center">
 							<form>
-          <div style="text-align: center" class="form-group">
-            <h4 style="font-weight: bold">TO RECEIVE KICKSTARTER UPDATES</h4>
-            <input type="text" class="form-control text-center" id="formGroupExampleInput" placeholder="Email">
-            <br>
-            <button id="subscribes" type="submit" class="btn btn-sm btn-primary">Subscribe</button>
-          </div>
-        </form>
+          						<div style="text-align: center" class="form-group">
+            					<h4 style="font-weight: bold">TO RECEIVE KICKSTARTER UPDATES</h4>
+            					<input type="text" class="form-control text-center" id="formGroupExampleInput" placeholder="Email">
+            					<br>
+            					<button id="subscribes" type="submit" class="btn btn-sm btn-primary">Subscribe</button>
+          						</div>
+        					</form>
 						</div>
 					</div>
 			</div>
@@ -178,5 +182,4 @@
 		</div>
 
 	</div> <!-- END fh5co-wrap -->
-
 <% include ../partials/footer %>

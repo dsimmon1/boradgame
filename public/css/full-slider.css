@@ -248,8 +248,10 @@ img.hover-shadow {
 
 #about {
   background-color: rgba(248,249,250, .9); 
-  border: 20px solid black;
   padding-top: 1em;
+  -moz-box-shadow:    3px 3px 5px 6px #ccc;
+  -webkit-box-shadow: 3px 3px 5px 6px #ccc;
+  box-shadow:         3px 3px 5px 6px #ccc;
 }
 
 #athobrae {
@@ -268,10 +270,33 @@ img.hover-shadow {
 }
 
 #contact {
-  margin: 2em;
+  margin-top: 1em;
+}
+
+#contact2 {
+  padding: 2em;
+  background-color: rgba(248,249,250, .7);
 }
 
 #scout {
   float: right;
+}
+
+video {
+    width: 100%;
+}
+.playpause {
+    background-image:url(/images/if_play-circle-outline_326584.png);
+    background-repeat:no-repeat;
+    width:25%;
+    height:25%;
+    position:absolute;
+    left:0%;
+    right:0%;
+    top:0%;
+    bottom:0%;
+    margin:auto;
+    background-size:contain;
+    background-position: center;
 }
 

@@ -11,6 +11,23 @@ $("#hi").on("mouseover", function () {
 
   });
 
+$('#hi').parent().click(function () {
+    if($(this).children("#hi").get(0).paused){
+        $(this).children("#hi").get(0).play();
+        $(this).children(".playpause").fadeOut();
+    }else{
+       $(this).children("#hi").get(0).pause();
+        $(this).children(".playpause").fadeIn();
+    }
+});
+
+$('video').on('play', function (e) {
+    $("#carouselExampleIndicators").carousel('pause');
+});
+$('video').on('stop pause ended', function (e) {
+    $("#carouselExampleIndicators").carousel();
+});
+
 function openModal() {
   document.getElementById('myModal').style.display = "block";
 }
