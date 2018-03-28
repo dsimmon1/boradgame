@@ -13,11 +13,19 @@ $("#hi").on("mouseover", function () {
 
 $('#hi').parent().click(function () {
     if($(this).children("#hi").get(0).paused){
+       console.log("play");
         $(this).children("#hi").get(0).play();
         $(this).children(".playpause").fadeOut();
+        $(".carousel-indicators").hide();
+        $(".carousel-control-prev").hide();
+        $(".carousel-control-next").hide();
     }else{
        $(this).children("#hi").get(0).pause();
         $(this).children(".playpause").fadeIn();
+        $(".carousel-indicators").show();
+        $(".carousel-control-prev").show();
+        $(".carousel-control-next").show();
+       console.log("paused");
     }
 });
 

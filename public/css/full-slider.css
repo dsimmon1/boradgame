@@ -286,7 +286,7 @@ video {
     width: 100%;
 }
 .playpause {
-    background-image:url(/images/if_play-circle-outline_326584.png);
+    background-image:url("http://www.bidwellpres.org/wp-content/uploads/2018/02/play-button-png.png");
     background-repeat:no-repeat;
     width:25%;
     height:25%;
@@ -300,3 +300,7 @@ video {
     background-position: center;
 }
 
+#carouselExampleSlidesOnly{
+    padding: 0;
+    margin: 0 0 1em 0;
+}
