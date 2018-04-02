@@ -7,7 +7,7 @@ const path = require('path');
 
 const app = express();
 
-let PORT = process.env.PORT || 3003;
+let PORT = process.env.PORT || 3006;
 
 
 app.set('views', __dirname + '/views');
@@ -51,7 +51,11 @@ app.get("/store", function(req, res) {
     });
 
 app.get("/home", function(req, res) {
-    res.render("pages/");
+    res.render("pages/home");
+    });
+
+app.get("/subscribe", function(req, res) {
+    res.render("pages/subscribe");
     });
 
 app.post("/contact", function(req, res) {
@@ -61,7 +65,6 @@ app.post("/contact", function(req, res) {
     <ul>  
       <li>Name: ${req.body.name}</li>
       <li>Email: ${req.body.email}</li>
-      <li>Phone: ${req.body.phone}</li>
     </ul>
     <h3>Message</h3>
     <p>${req.body.message}</p>
@@ -99,6 +102,37 @@ app.post("/contact", function(req, res) {
         // Preview URL: https://ethereal.email/message/WaQKMgKddxQDoou...
     });
     });
+
+app.post("/subscribe", function(req, res) {
+
+addEmail(req.body.email);
+
+res.end("success");
+});
+
+function addEmail (email) {
+    var request = require("request");
+
+var options = { method: 'POST',
+  url: 'https://us12.api.mailchimp.com/3.0/lists/981e2863f4/members',
+  headers: 
+   { 'postman-token': '5514077f-f653-214e-02fb-ea127eb045fd',
+     'cache-control': 'no-cache',
+     authorization: 'Basic YW55c3RyaW5nOjVmNWYyNWVkYzFkMjg1NzFmNGZjMjVjNGJmNmY1MjA0LXVzMTI=',
+     'content-type': 'application/json' },
+  body: 
+   { email_address: email,
+     status: 'subscribed' },
+  json: true };
+
+request(options, function (error, response, body) {
+  if (error) throw new Error(error);
+
+  console.log(body);
+});
+
+}
+
 
 app.listen(PORT, function() {
   console.log("App listening on PORT: " + PORT);

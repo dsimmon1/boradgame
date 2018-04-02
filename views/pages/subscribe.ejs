@@ -1,4 +1,4 @@
-<% include ../partials/head %>
+ <% include ../partials/head %>
 
 <nav class="navbar sticky-top navbar-expand-lg navbar-light bg-light">
       <div class="container">
@@ -17,10 +17,10 @@
               </a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="/contact">Contact</a>
+              <a class="nav-link active" href="/contact">Contact</a>
             </li>
             <li class="nav-item dropdown">
-              <a class="nav-link dropdown-toggle active" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Games</a>
+              <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Games</a>
               <div class="dropdown-menu" aria-labelledby="navbarDropdown">
                 <a class="dropdown-item" href="/athobrae">Athobrae</a>
                 <a class="dropdown-item" href="/coming">Coming Soon</a>
@@ -43,35 +43,40 @@
       </div>
     </nav>
 
-    <body style="background-image: url('../images/crossword.png')">
-    	<br>
+
+<body style="background-image: url('../images/crossword.png')">
 	<div id="fh5co-wrap">
 			<div id="contact" class="container">
 				<div class="row">
 					<div class="col">
 					</div>
 				</div>
-					<div id="moonlit" class="container">
-						<div class="row">
-						<div class="col-md-5">
-							<h1 class="text-center">On the Trail Of</h1>
-						</div>
-						<div class="col-md-7">
-							<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quidem quaerat dolorum, hic sapiente ad voluptates, ipsa magnam beatae vitae, amet facilis qui tempore deserunt. Deleniti perferendis incidunt unde impedit laboriosam?</p>
-						</div>
-						</div>
-						<div class="row">
-						<div class="col-md-5">
-							<h1 class="text-center">Mnemosyne: Piracy</h1>
-						</div>
-						<div class="col-md-7">
-							<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quidem quaerat dolorum, hic sapiente ad voluptates, ipsa magnam beatae vitae, amet facilis qui tempore deserunt. Deleniti perferendis incidunt unde impedit laboriosam?</p>
-						</div>
-						</div>
+					<div class="row">
+						<div class="col-md-1"></div>
+					<div  id="moonlit" class="col-md-9">
+						<h1 class="text-center">Subscibe to Moonlit Moor</h1>
+						<form>
+          <div style="text-align: center" class="form-group">
+            <h4 style="font-weight: bold">TO RECEIVE UPDATES FOR:</h4>
+            <div class="form-check">
+              <input class="form-check-input" type="checkbox" id="inlineCheckbox1" value="option1">
+              <label style="color: black" class="form-check-label" for="inlineCheckbox1">Kickstarter</label>
+            </div>
+            <div class="form-check">
+              <input class="form-check-input" type="checkbox" id="inlineCheckbox2" value="option2">
+              <label style="color: black" class="form-check-label" for="inlineCheckbox2">Newsletter</label>
+            </div>
+            <br>
+            <input type="text" class="form-control text-center" id="formGroupExampleInput" placeholder="Email">
+            <br>
+            <button id="subscribes" type="submit" class="btn btn-sm btn-primary">Subscribe</button>
+          </div>
+        </form>
+					</div>
 				</div>
 			</div>
 		</div>
-		<br><br><br>
+</div>
+<br>
 
-
-<% include ../partials/footer %>
+    <% include ../partials/footer %>

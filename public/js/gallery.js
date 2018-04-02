@@ -1,5 +1,10 @@
 $(document).ready(function() {
 
+// $(".carousel").hide();
+// setTimeout(function() { $(".carousel").show(); }, 5000);
+
+// $("#subscription").hide();
+// setTimeout(function() { $("#subscription").show(); }, 5000);
 
 $("#hi").on("mouseleave", function () {
 
@@ -35,6 +40,7 @@ $('video').on('play', function (e) {
 $('video').on('stop pause ended', function (e) {
     $("#carouselExampleIndicators").carousel();
 });
+
 
 function openModal() {
   document.getElementById('myModal').style.display = "block";

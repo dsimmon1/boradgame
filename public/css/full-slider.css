@@ -31,6 +31,61 @@
     margin-top:20px;
 }
 
+.slideDown{
+  animation-name: slideDown;
+  -webkit-animation-name: slideDown;  
+
+  animation-duration: 3s; 
+  -webkit-animation-duration: 3s;
+
+  animation-timing-function: ease;  
+  -webkit-animation-timing-function: ease;  
+
+  visibility: visible !important;           
+}
+
+@keyframes slideDown {
+  0% {
+    transform: translateY(-100%);
+  }
+  50%{
+    transform: translateY(8%);
+  }
+  65%{
+    transform: translateY(-4%);
+  }
+  80%{
+    transform: translateY(4%);
+  }
+  95%{
+    transform: translateY(-2%);
+  }     
+  100% {
+    transform: translateY(0%);
+  }   
+}
+
+@-webkit-keyframes slideDown {
+  0% {
+    -webkit-transform: translateY(-100%);
+  }
+  50%{
+    -webkit-transform: translateY(8%);
+  }
+  65%{
+    -webkit-transform: translateY(-4%);
+  }
+  80%{
+    -webkit-transform: translateY(4%);
+  }
+  95%{
+    -webkit-transform: translateY(-2%);
+  }     
+  100% {
+    -webkit-transform: translateY(0%);
+  } 
+}
+
 .thumbnail {
     padding: 0;
 }
@@ -216,6 +271,7 @@ img.hover-shadow {
 .carousel {
   margin: 1.5rem;
 }
+
 .carousel-inner {
   height: auto;
 }
@@ -282,8 +338,8 @@ img.hover-shadow {
   float: right;
 }
 
-video {
-    width: 100%;
+#hi {
+    max-width:100%;
 }
 .playpause {
     background-image:url("http://www.bidwellpres.org/wp-content/uploads/2018/02/play-button-png.png");
@@ -304,3 +360,52 @@ video {
     padding: 0;
     margin: 0 0 1em 0;
 }
+
+@media screen and (max-width: 1400px) and (min-width: 1000px){
+
+.pics {
+  height: 500px;
+}
+
+.c1 {
+  height: 600px;
+}
+}
+
+@media screen and (max-width: 1100px) and (min-width: 1000px){
+.pics {
+  height: 450px;
+}
+
+.c1 {
+  height: 600px;
+}
+  }
+
+@media screen and (max-width: 999px) and (min-width: 900px){
+.pics {
+  height: 400px;
+}
+.c1 {
+  height: 600px;
+}
+}
+
+
+@media screen and (max-width: 899px) and (min-width: 769px){
+.pics {
+  height: 300px;
+}
+}
+
+#carousel {
+  animation: fadeIn ease-in 1s;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
