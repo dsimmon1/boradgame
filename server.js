@@ -4,10 +4,11 @@ const nodemailer = require('nodemailer');
 const express = require("express");
 const bodyParser = require("body-parser");
 const path = require('path');
+const request = require("request");
 
 const app = express();
 
-let PORT = process.env.PORT || 3006;
+let PORT = process.env.PORT || 3007;
 
 
 app.set('views', __dirname + '/views');
@@ -43,6 +44,19 @@ app.get("/gallery", function(req, res) {
     });
 
 app.get("/newsletter", function(req, res) {
+    var options = { method: 'GET',
+  url: 'https://us12.api.mailchimp.com/3.0/campaigns/aad27e435c/content',
+  headers: 
+   { 'postman-token': '270d5330-5d0a-0fd5-14bb-4cba7de76d76',
+     'cache-control': 'no-cache',
+     authorization: 'Basic YW55c3RyaW5nOjVmNWYyNWVkYzFkMjg1NzFmNGZjMjVjNGJmNmY1MjA0LXVzMTI=',
+     'content-type': 'application/json' } };
+
+request(options, function (error, response, body) {
+  if (error) throw new Error(error);
+
+  console.log(req.body.html);
+});
     res.render("pages/newsletter");
     });
 
@@ -103,15 +117,14 @@ app.post("/contact", function(req, res) {
     });
     });
 
-app.post("/subscribe", function(req, res) {
+app.post("/newsletter", function(req, res) {
 
-addEmail(req.body.email);
+addNewsletter(req.body.email);
 
 res.end("success");
 });
 
-function addEmail (email) {
-    var request = require("request");
+function addNewsletter (email) {
 
 var options = { method: 'POST',
   url: 'https://us12.api.mailchimp.com/3.0/lists/981e2863f4/members',
@@ -133,6 +146,35 @@ request(options, function (error, response, body) {
 
 }
 
+app.post("/kickstarter", function(req, res) {
+
+addKickstarter(req.body.email);
+
+res.end("success");
+});
+
+function addKickstarter (email) {
+    var request = require("request");
+
+var options = { method: 'POST',
+  url: 'https://us12.api.mailchimp.com/3.0/lists/c3f5274fd3/members',
+  headers: 
+   { 'postman-token': '5514077f-f653-214e-02fb-ea127eb045fd',
+     'cache-control': 'no-cache',
+     authorization: 'Basic YW55c3RyaW5nOjVmNWYyNWVkYzFkMjg1NzFmNGZjMjVjNGJmNmY1MjA0LXVzMTI=',
+     'content-type': 'application/json' },
+  body: 
+   { email_address: email,
+     status: 'subscribed' },
+  json: true };
+
+request(options, function (error, response, body) {
+  if (error) throw new Error(error);
+
+  console.log(body);
+});
+
+}
 
 app.listen(PORT, function() {
   console.log("App listening on PORT: " + PORT);

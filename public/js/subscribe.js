@@ -5,20 +5,38 @@ $('#subscribes').on("click", function() {
 
 	var email = $("#formGroupExampleInput").val().trim();
 
-
 	var newEmail = {
 		email: email
 	}
 
- $.ajax("/subscribe", {
-      type: "POST",
-      data: newEmail
-    }).then(
-      function() {
-        console.log("new subscriber");
-         location.reload();
-      }
-    );
+	 if ($("#inlineCheckbox1").is(':checked')) {
+   	
+   		 $.ajax("/kickstarter", {
+	      type: "POST",
+	      data: newEmail
+	    }).then(
+	      function() {
+	        console.log("new subscriber");
+	         location.reload();
+	      }
+	    );
+
+		}
+		if ($("#inlineCheckbox2").is(':checked')) {
+   
+   		 $.ajax("/newsletter", {
+	      type: "POST",
+	      data: newEmail
+	    }).then(
+	      function() {
+	        console.log("new subscriber");
+	         location.reload();
+	      }
+
+	    );
+		}
+
+
 });
 
 

@@ -290,17 +290,6 @@ img.hover-shadow {
     font-size: 35px;
 }
 
-@media (max-width: 768px) {
-
-  #subscription {
-    margin-left: 3em;
-    margin-right: 3em;
-  }
-  #about {
-    margin: 2em;
-  }
-
-}
 
 #about {
   background-color: rgba(248,249,250, .9); 
@@ -409,3 +398,27 @@ img.hover-shadow {
     to {
         opacity: 1;
     }
+
+@media (max-width: 768px) {
+
+.fh5co-section{
+  border: 0;
+}
+  #subscription {
+    margin-left: 3em;
+    margin-right: 3em;
+    border: none;
+  }
+  #about {
+    margin: 2em;
+  }
+
+  #moonlit {
+    border: 0;
+  }
+
+  * {
+    border: 0
+  }
+
+}
