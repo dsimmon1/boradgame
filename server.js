@@ -55,7 +55,7 @@ app.get("/newsletter", function(req, res) {
 request(options, function (error, response, body) {
   if (error) throw new Error(error);
 
-  console.log(req.body.html);
+  console.log(body.Connection);
 });
     res.render("pages/newsletter");
     });
@@ -97,7 +97,7 @@ app.post("/contact", function(req, res) {
     let mailOptions = {
         from: '"Diana Simmons" <simmons.diana93@gmail.com>', // sender address
         // to: 'iamariellesimonee@gmail.com',
-        to: 'simmons.diana93@gmail.com',
+        to: 'moonlitmoorgames@gmail.com',
         subject: 'New Contact from Website', // Subject line
         text: 'Hello world?', // plain text body
         html: output // html body
@@ -125,13 +125,14 @@ res.end("success");
 });
 
 function addNewsletter (email) {
+    var request = require("request");
 
 var options = { method: 'POST',
-  url: 'https://us12.api.mailchimp.com/3.0/lists/981e2863f4/members',
+  url: 'https://us12.api.mailchimp.com/3.0/lists/400b9d1d3c/members',
   headers: 
-   { 'postman-token': '5514077f-f653-214e-02fb-ea127eb045fd',
+   { 'postman-token': '59fe2ea6-3543-d2a1-c4fc-55744eecd081',
      'cache-control': 'no-cache',
-     authorization: 'Basic YW55c3RyaW5nOjVmNWYyNWVkYzFkMjg1NzFmNGZjMjVjNGJmNmY1MjA0LXVzMTI=',
+     authorization: 'Basic YW55c3RyaW5nOjFlMTU1YjFlZGQ5NWU3MTI0YTBkNzJkYmQ2YTg2Y2MwLXVzMTI=',
      'content-type': 'application/json' },
   body: 
    { email_address: email,
@@ -157,11 +158,11 @@ function addKickstarter (email) {
     var request = require("request");
 
 var options = { method: 'POST',
-  url: 'https://us12.api.mailchimp.com/3.0/lists/c3f5274fd3/members',
+  url: 'https://us12.api.mailchimp.com/3.0/lists/8438f2d3ee/members',
   headers: 
-   { 'postman-token': '5514077f-f653-214e-02fb-ea127eb045fd',
+   { 'postman-token': '59fe2ea6-3543-d2a1-c4fc-55744eecd081',
      'cache-control': 'no-cache',
-     authorization: 'Basic YW55c3RyaW5nOjVmNWYyNWVkYzFkMjg1NzFmNGZjMjVjNGJmNmY1MjA0LXVzMTI=',
+     authorization: 'Basic YW55c3RyaW5nOjFlMTU1YjFlZGQ5NWU3MTI0YTBkNzJkYmQ2YTg2Y2MwLXVzMTI=',
      'content-type': 'application/json' },
   body: 
    { email_address: email,

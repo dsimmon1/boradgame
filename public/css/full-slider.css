@@ -4,6 +4,7 @@
  * Licensed under MIT (https://github.com/BlackrockDigital/startbootstrap-full-slider/blob/master/LICENSE)
  */
 
+
  nav {
  /* height: 50px;*/
    -moz-box-shadow: 5px 5px 5px rgba(68, 68, 68, 0.6);
@@ -238,35 +239,10 @@ img.hover-shadow {
 }
 
 #subscription {
-  -moz-box-shadow:    3px 3px 5px 6px #ccc;
-  -webkit-box-shadow: 3px 3px 5px 6px #ccc;
-  box-shadow:         3px 3px 5px 6px #ccc;
     background-color: rgba(248,249,250, .9); 
-    border: 20px solid rgba(68,68,68, .9);
     padding: 20px; 
 /*    outline: 10px solid rgba(68,68,68, .9);*/
   }
-
-/*.carousel-control-prev-icon,
-.carousel-control-next-icon {
-  height: 100px;
-  width: 100px;
-  background-size: 100%, 100%;
-  background-image: none;
-}
-
-.carousel-control-next-icon:after
-{
-  content: '>';
-  font-size: 55px;
-  color: red;
-}
-
-.carousel-control-prev-icon:after {
-  content: '<';
-  font-size: 55px;
-  color: red;
-}*/
 
 .carousel {
   margin: 1.5rem;
@@ -305,11 +281,7 @@ img.hover-shadow {
 }
 
 #moonlit {
-  -moz-box-shadow:    3px 3px 5px 6px #ccc;
-  -webkit-box-shadow: 3px 3px 5px 6px #ccc;
-  box-shadow:         3px 3px 5px 6px #ccc;
     background-color: rgba(248,249,250, .7); 
-    border: 20px solid rgba(68,68,68, .7);
     padding: 20px; 
     margin-bottom: 2em;
 }
@@ -345,11 +317,55 @@ img.hover-shadow {
     background-position: center;
 }
 
-#carouselExampleSlidesOnly{
-    padding: 0;
-    margin: 0 0 1em 0;
+.playb {
+   background-image:url("http://www.bidwellpres.org/wp-content/uploads/2018/02/play-button-png.png");
+    background-repeat:no-repeat;
+    width:25%;
+    height:25%;
+    position:absolute;
+    left:0%;
+    right:0%;
+    top:0%;
+    bottom:0%;
+    margin:auto;
+    background-size:contain;
+    background-position: center;
 }
 
+
+@media screen and (max-width: 1400px) and (min-width: 769px) {
+  #subscription{
+  -moz-box-shadow:    3px 3px 5px 6px #ccc;
+  -webkit-box-shadow: 3px 3px 5px 6px #ccc;
+  box-shadow:         3px 3px 5px 6px #ccc;
+  border: 20px solid rgba(68,68,68, .9);
+}
+
+ #section {
+  border: 10px solid rgba(68,68,68, .9);
+ }
+
+#moonlit {
+  -moz-box-shadow:    3px 3px 5px 6px #ccc;
+  -webkit-box-shadow: 3px 3px 5px 6px #ccc;
+  box-shadow:         3px 3px 5px 6px #ccc;
+  border: 20px solid rgba(68,68,68, .7);
+}
+
+#carousel-fade{
+    padding: 0;
+    margin: 0 0 -9em 0;
+}
+}
+
+@media screen and (max-width: 768px) and (min-width: 300px) {
+
+#carousel-fade{
+    padding: 0;
+    margin: 0 0 -6em 0;
+}
+
+}
 @media screen and (max-width: 1400px) and (min-width: 1000px){
 
 .pics {
@@ -399,26 +415,16 @@ img.hover-shadow {
         opacity: 1;
     }
 
-@media (max-width: 768px) {
-
-.fh5co-section{
-  border: 0;
-}
+@media (max-width: 769px) {
   #subscription {
     margin-left: 3em;
     margin-right: 3em;
     border: none;
   }
-  #about {
-    margin: 2em;
+
+ #fh5co-section{
+  border: 0;
   }
 
-  #moonlit {
-    border: 0;
-  }
-
-  * {
-    border: 0
-  }
 
 }
