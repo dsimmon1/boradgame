@@ -32,6 +32,26 @@ $('#submit').on("click", function() {
     );
 });
 
+$('#subscribes').on("click", function() {
+  event.preventDefault();
+
+  var email = $("#formGroupExampleInput").val().trim();
+
+  var newEmail = {
+    email: email
+  }
+
+  $.ajax("/kickstarter", {
+        type: "POST",
+        data: newEmail
+      }).then(
+        function() {
+          console.log("new subscriber");
+           location.reload();
+        }
+      );
+    });
+
 $("video").on("mouseleave", function () {
 
    $(this).removeAttr("controls"); 

@@ -39,26 +39,5 @@ $('#subscribes').on("click", function() {
 
 });
 
-$("video").on("mouseleave", function () {
-
-   $(this).removeAttr("controls"); 
-  });
-
-$("video").on("mouseover", function () {
-  $(this).attr("controls","controls"); 
-
-  });
-
-$('#hi').parent().click(function () {
-    if($(this).children("#hi").get(0).paused){
-        $(this).children("#hi").get(0).play();
-        $(".playb").css('opacity','0');
-    }else{
-       $(this).children("#hi").get(0).pause();
-        $(".playb").css('opacity','1');
-    }
-});
-
-
 
 });
