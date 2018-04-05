@@ -41,15 +41,18 @@ $('#subscribes').on("click", function() {
     email: email
   }
 
-  $.ajax("/kickstarter", {
-        type: "POST",
-        data: newEmail
-      }).then(
-        function() {
-          console.log("new subscriber");
-           location.reload();
-        }
-      );
+  $("#formGroupExampleInput").val('');
+
+
+   $.ajax("/kickstarter", {
+      type: "POST",
+      data: newEmail
+    }).then(
+      function() {
+        console.log("new contact");
+         location.reload();
+      }
+    );
     });
 
 $("video").on("mouseleave", function () {

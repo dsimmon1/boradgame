@@ -1,32 +1,23 @@
 $(document).ready(function() {
 
-$("video").on("mouseleave", function () {
 
-   $(this).removeAttr("controls"); 
-  });
-
-$("video").on("mouseover", function () {
-  $(this).attr("controls","controls"); 
-
-  });
-
-$('video').parent().click(function () {
-    if($(this).children("video").get(0).paused){
-        $(this).children("video").get(0).play();
-        $(this).children(".playpause").fadeOut();
-        $(".carousel-indicators").hide();
-        $(".carousel-control-prev").hide();
-        $(".carousel-control-next").hide();
-        $("#carouselExampleIndicators").carousel('pause');
-    }else{
-       $(this).children("video").get(0).pause();
-        $(this).children(".playpause").fadeIn();
-        $(".carousel-indicators").show();
-        $(".carousel-control-prev").show();
-        $(".carousel-control-next").show();
-        $("#carouselExampleIndicators").carousel();
-    }
-});
+// $('video').parent().click(function () {
+//     if($(this).children("video").get(0).paused){
+//         $(this).children("video").get(0).play();
+//         $(this).children(".playpause").fadeOut();
+//         $(".carousel-indicators").hide();
+//         $(".carousel-control-prev").hide();
+//         $(".carousel-control-next").hide();
+//         $("#carouselExampleIndicators").carousel('pause');
+//     }else{
+//        $(this).children("video").get(0).pause();
+//         $(this).children(".playpause").fadeIn();
+//         $(".carousel-indicators").show();
+//         $(".carousel-control-prev").show();
+//         $(".carousel-control-next").show();
+//         $("#carouselExampleIndicators").carousel();
+//     }
+// });
 
 $('video').on('play', function (e) {
     $("#carouselExampleIndicators").carousel('pause');

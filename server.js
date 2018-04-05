@@ -8,7 +8,7 @@ const request = require("request");
 
 const app = express();
 
-let PORT = process.env.PORT || 3007;
+let PORT = process.env.PORT || 3000;
 
 
 app.set('views', __dirname + '/views');
@@ -150,6 +150,7 @@ request(options, function (error, response, body) {
 app.post("/kickstarter", function(req, res) {
 
 addKickstarter(req.body.email);
+
 
 res.end("success");
 });

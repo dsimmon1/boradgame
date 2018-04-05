@@ -25,7 +25,7 @@
 <body style="background-image: url('../images/crossword.png')">
     <nav class="navbar sticky-top navbar-expand-lg navbar-light bg-light">
         <div class="container">
-            <a class="navbar-brand" href="#">
+            <a class="navbar-brand" href="/home">
           
           <img src="/images/MM-Logo.png" height="60px" width="170px">
         </a>
@@ -66,7 +66,7 @@
         </div>
     </nav>
     <div id="fh5co-wrap">
-        <div id="carousel-fade" class="carousel carousel-fade" data-ride="carousel" data-interval="4000">
+        <div id="carousel-fade" class="carousel carousel-fade" data-ride="carousel" data-interval="1000">
             <div class="carousel-inner embed-responsive embed-responsive-16by9" role="listbox">
                 <div class="carousel-item embed-responsive-item active">
                     <img src="../images/anthobrae/Athobrae Banner_01.png" alt="First slide image" class="d-block w-100">
@@ -114,12 +114,12 @@
             				<source src="/images/01_Trailer no_ship.mp4" type="video/mp4">
            					Athobrae Trailer
           				</video>
-         				<div class="playb"></div>
+         				<!-- <div class="playb"></div> -->
                     </div>
                     <div id="about" class="col-md-3">
                         <ul class="fh5co-social text-center">
                             <li style="font-weight: bold">Designers</li>
-                            <li>Bradford S. Obie and David Panzer
+                            <li>Bradford S. Obie <br> David Panzer
                             </li>
                             <br>
                             <li style="font-weight: bold">Players</li>
@@ -191,9 +191,9 @@
                         <form>
                             <div style="text-align: center" class="form-group">
                                 <h4 style="font-weight: bold">TO RECEIVE KICKSTARTER UPDATES</h4>
-                                <input type="text" class="form-control text-center" id="formGroupExampleInput" placeholder="Email">
+                                <input type="text" class="form-control text-center" id="emailForm" placeholder="Email">
                                 <br>
-                                <button id="subscribes" type="submit" class="btn btn-sm btn-primary">Subscribe</button>
+                                <button id="subscribed" type="submit" class="btn btn-sm btn-primary">Subscribe</button>
                             </div>
                         </form>
                     </div>
@@ -223,12 +223,12 @@
         </div>
     </footer>
     <!-- Bootstrap core JavaScript -->
-    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.3/umd/popper.min.js"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/js/bootstrap.min.js"></script>
+     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
     <!-- MAIN JS -->
     <script src="js/main.js"></script>
-    <script src="js/contact.js"></script>
+    <script src="js/kickstarter.js"></script>
 </body>
 <style type="text/css">
 .carousel.carousel-fade .carousel-item {
