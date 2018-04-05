@@ -98,7 +98,7 @@ app.post("/contact", function(req, res) {
         from: '"Diana Simmons" <simmons.diana93@gmail.com>', // sender address
         // to: 'iamariellesimonee@gmail.com',
         // to: 'moonlitmoorgames@gmail.com',
-        to: 'diannaesimmons@gmail.com',
+        to: 'simmons.diana93@gmail.com',
         subject: 'New Contact from Website', // Subject line
         text: 'Hello world?', // plain text body
         html: output // html body
