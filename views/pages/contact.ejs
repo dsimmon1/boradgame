@@ -89,4 +89,68 @@
 		</div>
 </div>
 
-    <% include ../partials/footer %>
+    <footer class="footer" id="fh5co-footer">
+    <div style="text-align: center" class="container">
+      <div class="row">
+        <div class="col-3 fh5co-copyright">
+          <p>Moonlit-Moor&copy; 2018</p>
+        </div>
+        <div class="col-9">
+          <ul class="fh5co-social">
+            <li><a href="http://www.twitter.com/MoonlitMoorLLC"><i class="icon-twitter"></i> <span>Twitter</span></a></li>
+            <li><a href="http://www.facebook.com/moonlitmoorgames/"><i class="icon-facebook"></i> <span>Facebook</span></a></li>
+            <li><a href="http://moonlitmoorgames.tumblr.com"><i class="icon-tumblr"></i> <span>Tumblr</span></a></li>
+            <li><a href="#"><i class="icon-youtube"></i> <span>Youtube</span></a></li>
+            <li><a href="http://vimeo.com/moonlitmoorgames"><i class="icon-vimeo"></i> <span>Vimeo</span></a></li>
+            <li><a href="http://www.instagram.com/moonlitmoorgames/"><i class="icon-instagram"></i> <span>Instagram</span></a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+    <!-- Bootstrap core JavaScript -->
+<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+  <!-- MAIN JS -->
+  <script src="js/main.js"></script>
+  <!-- <script src="js/contact.js"></script> -->
+<script type="text/javascript">
+	$('#submit').on("click", function() {
+	event.preventDefault();
+
+	var name = $("#name").val().trim();
+	var email = $("#email").val().trim();
+	var message = $("#message").val().trim();
+
+
+	var newContact = {
+		name: name,
+		email: email,
+		message: message
+	}
+
+	console.log(newContact);
+
+	$("#name").val('');
+	$("#email").val('');
+	$("#message").val('');
+
+
+ $.ajax("/contact", {
+      type: "POST",
+      data: newContact
+    }).then(
+      function() {
+        console.log("new contact");
+         location.reload();
+      }
+    );
+});
+</script>
+  
+
+  </body>
+
+</html>

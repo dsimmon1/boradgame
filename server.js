@@ -8,7 +8,7 @@ const request = require("request");
 
 const app = express();
 
-let PORT = process.env.PORT || 3000;
+let PORT = process.env.PORT || 3001;
 
 
 app.set('views', __dirname + '/views');
@@ -121,6 +121,7 @@ app.post("/contact", function(req, res) {
 app.post("/newsletter", function(req, res) {
 
 addNewsletter(req.body.email);
+// console.log(req.body.email);
 
 res.end("success");
 });
@@ -151,7 +152,7 @@ request(options, function (error, response, body) {
 app.post("/kickstarter", function(req, res) {
 
 addKickstarter(req.body.email);
-
+// console.log(req.body.email);
 
 res.end("success");
 });
