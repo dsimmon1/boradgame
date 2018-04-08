@@ -1,6 +1,7 @@
 "use strict";
 
 const sgMail = require('@sendgrid/mail');
+const fs = require("fs");
 const express = require("express");
 const bodyParser = require("body-parser");
 const path = require('path');
@@ -85,7 +86,14 @@ app.post("/contact", function(req, res) {
   `
   console.log(output);
 
-  sgMail.setApiKey('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');
+  fs.readFile("encrypt.txt", "utf8", function(error, data) {
+  if (error) {
+    return console.log(error);
+  }
+  console.log(data);
+});
+
+  sgMail.setApiKey(data);
 const msg = {
   to: 'simmons.diana93@gmail.com',
   from: 'simmons.diana93@gmail.com',
