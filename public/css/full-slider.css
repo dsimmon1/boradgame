@@ -113,8 +113,9 @@
   height: 465px;
 }
 
-.row > .column {
+.row > .pgallery {
   padding: 0 8px;
+  margin-bottom: 10px;
 }
 
 .row:after {
@@ -124,7 +125,6 @@
 }
 
 .column {
-  float: left;
   width: 25%;
 }
 
