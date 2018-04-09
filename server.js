@@ -6,6 +6,7 @@ const express = require("express");
 const bodyParser = require("body-parser");
 const path = require('path');
 const request = require("request");
+const mongojs = require("mongojs");
 
 const app = express();
 
@@ -86,24 +87,36 @@ app.post("/contact", function(req, res) {
   `
   console.log(output);
 
-  fs.readFile("encrypt.txt", "utf8", function(error, data) {
-  if (error) {
-    return console.log(error);
-  }
-  console.log(data);
+var databaseUrl = 'mongodb://dianna:password@ds013192.mlab.com:13192/boardgame';
+var collections = ["contact"];
+var db = mongojs(databaseUrl, collections);
+
+db.on("error", function(error) {
+  console.log("Database Error:", error);
 });
 
-  sgMail.setApiKey(data);
-const msg = {
-  to: 'simmons.diana93@gmail.com',
-  from: 'simmons.diana93@gmail.com',
-  subject: req.body.name + ' sent you a new messgae',
-  text: 'and easy to do anywhere, even with Node.js',
-  html: output
-};
-sgMail.send(msg);
+db.contact.find({}, function(err, found) {
+    // Log any errors if the server encounters one
+    if (err) {
+      console.log(err);
+    }
+    // Otherwise, send the result of this query to the browser
+    else {
+      console.log(found[0].key);
+  
 
-     
+//   sgMail.setApiKey(none);
+// const msg = {
+//   to: 'simmons.diana93@gmail.com',
+//   from: 'simmons.diana93@gmail.com',
+//   subject: req.body.name + ' sent you a new messgae',
+//   text: 'and easy to do anywhere, even with Node.js',
+//   html: output
+// };
+// sgMail.send(msg);
+
+      }
+  });
     });
 
 app.post("/newsletter", function(req, res) {
