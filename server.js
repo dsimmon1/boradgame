@@ -105,15 +105,15 @@ db.contact.find({}, function(err, found) {
       console.log(found[0].key);
   
 
-//   sgMail.setApiKey(none);
-// const msg = {
-//   to: 'simmons.diana93@gmail.com',
-//   from: 'simmons.diana93@gmail.com',
-//   subject: req.body.name + ' sent you a new messgae',
-//   text: 'and easy to do anywhere, even with Node.js',
-//   html: output
-// };
-// sgMail.send(msg);
+  sgMail.setApiKey(found[0].key);
+const msg = {
+  to: 'simmons.diana93@gmail.com',
+  from: 'simmons.diana93@gmail.com',
+  subject: req.body.name + ' sent you a new messgae',
+  text: 'and easy to do anywhere, even with Node.js',
+  html: output
+};
+sgMail.send(msg);
 
       }
   });
