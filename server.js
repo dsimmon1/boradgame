@@ -107,7 +107,7 @@ db.contact.find({}, function(err, found) {
 
   sgMail.setApiKey(found[0].key);
 const msg = {
-  to: 'moonlitmoorgames@gmail.com',
+  to: 'diannaesimmons@gmail.com',
   from: 'simmons.diana93@gmail.com',
   subject: req.body.name + ' sent you a new messgae',
   text: 'and easy to do anywhere, even with Node.js',
