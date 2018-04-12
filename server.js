@@ -76,7 +76,7 @@ app.get("/subscribe", function(req, res) {
 
 app.post("/contact", function(req, res) {
   const output = `
-    <p>You have a new contact request</p>
+    <p>You have a new contact request!</p>
     <h3>Contact Details</h3>
     <ul>  
       <li>Name: ${req.body.name}</li>
