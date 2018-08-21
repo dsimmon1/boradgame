@@ -10,7 +10,8 @@ const mongojs = require("mongojs");
 
 const app = express();
 
-let PORT = process.env.PORT || 2002;
+let PORT = process.env.PORT || 2005;
+  var campaign = {'hi': 'we are one'};
 
 
 app.set('views', __dirname + '/views');
@@ -46,7 +47,7 @@ app.get("/gallery", function(req, res) {
     });
 
 app.get("/newsletter", function(req, res) {
-    var options = { method: 'GET',
+  var options = { method: 'GET',
   url: 'https://us12.api.mailchimp.com/3.0/campaigns/aad27e435c/content',
   headers: 
    { 'postman-token': '270d5330-5d0a-0fd5-14bb-4cba7de76d76',
@@ -56,10 +57,9 @@ app.get("/newsletter", function(req, res) {
 
 request(options, function (error, response, body) {
   if (error) throw new Error(error);
-
-  console.log(body.Connection);
-});
-    res.render("pages/newsletter");
+    // console.log(response);
+   });
+    res.render("pages/newsletter",{ camp: campaign});
     });
 
 app.get("/store", function(req, res) {
@@ -72,6 +72,10 @@ app.get("/home", function(req, res) {
 
 app.get("/subscribe", function(req, res) {
     res.render("pages/subscribe");
+    });
+
+app.get("/faq", function(req, res) {
+    res.render("pages/faq");
     });
 
 app.post("/contact", function(req, res) {

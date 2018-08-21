@@ -1,11 +1,22 @@
 $(document).ready(function() {
+const express = require("express");
+const request = require("request");
 
- $.ajax("/newsletter", {
-        type: "GET",
-      }).done(
-        function(response) {
-          console.log(response);
-        });
+$("#press").on("click", function() {
+  console.log("click");
+  var options = { method: 'GET',
+  url: 'https://us12.api.mailchimp.com/3.0/campaigns/aad27e435c/content',
+  headers: 
+   { 'postman-token': '270d5330-5d0a-0fd5-14bb-4cba7de76d76',
+     'cache-control': 'no-cache',
+     authorization: 'Basic YW55c3RyaW5nOjVmNWYyNWVkYzFkMjg1NzFmNGZjMjVjNGJmNmY1MjA0LXVzMTI=',
+     'content-type': 'application/json' } };
+request(options, function (error, response, body) {
+  if (error) throw new Error(error);
+  console.log(response);
+
+   });
+});
 
        //    var results = response.data;
        //      var h2 = $("<h2>").text(show);
