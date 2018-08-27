@@ -10,7 +10,7 @@ const mongojs = require("mongojs");
 
 const app = express();
 
-let PORT = process.env.PORT || 2005;
+let PORT = process.env.PORT || 2004;
   var campaign = {'hi': 'we are one'};
 
 
@@ -57,9 +57,12 @@ app.get("/newsletter", function(req, res) {
 
 request(options, function (error, response, body) {
   if (error) throw new Error(error);
-    // console.log(response);
+    // var parsedBody = JSON.parse(response.body)
+    // console.log('+++line 61 parsed body: ', parsedBody.plain_text)
+    // var newsletter = JSON.stringify(response.body)
+    // res.send({news: newsletter});
    });
-    res.render("pages/newsletter",{ camp: campaign});
+  res.render("pages/newsletter", {campaign,});
     });
 
 app.get("/store", function(req, res) {

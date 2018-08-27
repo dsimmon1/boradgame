@@ -67,6 +67,7 @@ h1, h2, h3, h4, h5, h6 {
   background: #52d3aa;
 }
 
+
 #fh5co-wrap {
   background-color: none;
   position: relative;
@@ -144,6 +145,17 @@ h1, h2, h3, h4, h5, h6 {
   border-bottom: 2px solid transparent;
   display: block;
 }
+
+@media screen and (min-width: 992px) {
+
+  .archive {
+    position: fixed;
+    top: 100px;
+}
+
+}
+
+
 @media screen and (max-width: 768px) {
   #fh5co-header nav li a {
     padding: 10px 2px;
@@ -180,6 +192,7 @@ h1, h2, h3, h4, h5, h6 {
     height: inherit;
     padding: 4em 0;
   }
+
 }
 .fh5co-hero .fh5co-intro h1, .fh5co-parallax .fh5co-intro h1 {
   color: #fff;

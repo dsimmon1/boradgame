@@ -1,23 +1,19 @@
 $(document).ready(function() {
-const express = require("express");
-const request = require("request");
 
-$("#press").on("click", function() {
-  console.log("click");
-  var options = { method: 'GET',
-  url: 'https://us12.api.mailchimp.com/3.0/campaigns/aad27e435c/content',
-  headers: 
-   { 'postman-token': '270d5330-5d0a-0fd5-14bb-4cba7de76d76',
-     'cache-control': 'no-cache',
-     authorization: 'Basic YW55c3RyaW5nOjVmNWYyNWVkYzFkMjg1NzFmNGZjMjVjNGJmNmY1MjA0LXVzMTI=',
-     'content-type': 'application/json' } };
-request(options, function (error, response, body) {
-  if (error) throw new Error(error);
-  console.log(response);
 
-   });
-});
-
+fetch("/newsletter").then(
+  function(response){
+    var pagebody = response.body;
+    return pagebody;
+  }).then((pagebody) => {
+    const reader = pagebody.getReader();
+    return reader.read()
+  }).then((promise) => {
+    console.log(promise);
+  })
+  .catch(function(error){
+    console.log(error);
+  });
        //    var results = response.data;
        //      var h2 = $("<h2>").text(show);
        //    $(".title").append(h2);
