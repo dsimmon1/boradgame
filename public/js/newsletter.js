@@ -9,7 +9,7 @@ fetch("/newsletter").then(
     const reader = pagebody.getReader();
     return reader.read()
   }).then((promise) => {
-    console.log(promise);
+    promise.then()
   })
   .catch(function(error){
     console.log(error);
