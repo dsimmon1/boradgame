@@ -80,6 +80,9 @@ app.get("/subscribe", function(req, res) {
 app.get("/faq", function(req, res) {
     res.render("pages/faq");
     });
+app.get("/dreamwalkers", function(req, res) {
+    res.render("pages/dreamwalkers");
+    });
 
 app.post("/contact", function(req, res) {
   const output = `
